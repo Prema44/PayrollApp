@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     empPayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector('.emp-count').textContent = empPayrollList.length;
     createInnerHtml();
+    localStorage.removeItem('editEmp');
 });
 
 const createInnerHtml = () => {
