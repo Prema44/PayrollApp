@@ -20,12 +20,40 @@
         </header>
         <div class = "main-content">
             <div class = "header-content">
-                <div class = "emp-details-text">Employee Details
+                <div class = "emp-detail-text">Employee Details
                     <div class = "emp-count">10</div>
                 </div>
                 <a href = "../html/PayrollForm.html" class = "add-button">
                     <img src = "../assets/add-24px.svg" alt = "">Add User</a>
                 </div>
+            </div>
+            <div class = "table-main">
+                <table class = "table" id = "display">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>StartDate</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr> 
+                        <td><img class = "profile" src = "../assets/Ellipse -1.png" alt = ""></td>
+                        <td>Sakshat Bagadi</td>
+                        <td>Male</td>
+                        <td>
+                            <div class = "dept-label">HR</div>
+                            <div class = "dept-label">Finance</div>
+                        </td>
+                        <td>3000000</td>
+                        <td>1 April 2020</td>
+                        <td>
+                            <img id = "1" src = "../assets/create-black-18dp.svg" onclick = "update(this)" alt = "edit">
+                            <img id = "1" src = "../assets/delete-black-18dp.svg" onclick = "remove(this)" alt = "delete">
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>   
     </body>
