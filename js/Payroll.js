@@ -46,7 +46,7 @@ class EmployeePayrollData {
 
     toString() {
         const options = {year : 'numeric', month : 'long', day : 'numeric'};
-        const empDate =  this.startDate === undefined ? "undefined" : (new Date(this.startDate)).toLocaleDateString('en-US', options);
+        const empDate =  this.startDate === undefined ? "undefined" : this.startDate.toLocaleDateString('en-US', options);
         return "id = " + this.id + ", name = " + this.name + ", gender = " + this.gender + 
                ", salary = " + this.salary + ", ProfilePic = " + this.profilePic + ", department = " + this.department + 
                ", start date = " + empDate + ", Notes = " + this.notes;
@@ -132,7 +132,7 @@ const createEmployeePayroll = () => {
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.notes = getInputValueById('#notes');
     let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
-    employeePayrollData.startDate = Date.parse(date);
+    employeePayrollData.startDate = new Date(Date.parse(date));
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
