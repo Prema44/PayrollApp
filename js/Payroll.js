@@ -60,7 +60,6 @@ class EmployeePayrollData {
     both elements 
 */
 window.addEventListener('DOMContentLoaded', () => {
-
     const textError = document.querySelector('.text-error');
     const name = document.querySelector('#name');
     name.addEventListener('input', function(){
